@@ -11,7 +11,7 @@ END MUX;
 				
 ARCHITECTURE Behavior OF MUX IS
 BEGIN
-	PROCESS (Clock)
+	PROCESS(Clock)
 	BEGIN
 		IF Clock'EVENT AND Clock = '1' THEN
 			IF S = '0' THEN

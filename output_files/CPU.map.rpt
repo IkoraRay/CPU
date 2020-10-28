@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Mon Oct 26 21:59:57 2020
+Wed Oct 28 10:27:08 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Oct 26 21:59:57 2020           ;
+; Analysis & Synthesis Status        ; Failed - Wed Oct 28 10:27:08 2020           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; CPU                                         ;
@@ -161,7 +161,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 26 21:58:05 2020
+    Info: Processing started: Wed Oct 28 10:26:34 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -174,18 +174,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file regbank
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
     Info (12022): Found design unit 1: ULA-LogicFunc File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/ULA.vhd Line: 15
     Info (12023): Found entity 1: ULA File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/ULA.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file cache.vhd
-    Info (12022): Found design unit 1: CACHE-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CACHE.vhd Line: 15
-    Info (12023): Found entity 1: CACHE File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CACHE.vhd Line: 4
+Error (10500): VHDL syntax error at CACHE.vhd(21) near text ")";  expecting "(", or an identifier, or  unary operator File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CACHE.vhd Line: 21
+Error (10500): VHDL syntax error at CACHE.vhd(23) near text ")";  expecting "(", or an identifier, or  unary operator File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CACHE.vhd Line: 23
+Info (12021): Found 0 design units, including 0 entities, in source file cache.vhd
 Warning (12090): Entity "MUX" obtained from "MUX.vhd" instead of from Quartus Prime megafunction library File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/MUX.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
     Info (12022): Found design unit 1: MUX-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/MUX.vhd Line: 12
     Info (12023): Found entity 1: MUX File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/MUX.vhd Line: 4
-Error (10482): VHDL error at CACHE.vhd(30): object "data" is used but not declared File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CACHE.vhd Line: 30
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Mon Oct 26 21:59:58 2020
-    Error: Elapsed time: 00:01:53
-    Error: Total CPU time (on all processors): 00:01:47
+Info (12021): Found 2 design units, including 1 entities, in source file controle.vhd
+    Info (12022): Found design unit 1: Controle-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/Controle.vhd Line: 12
+    Info (12023): Found entity 1: Controle File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/Controle.vhd Line: 4
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
+    Error: Peak virtual memory: 4778 megabytes
+    Error: Processing ended: Wed Oct 28 10:27:08 2020
+    Error: Elapsed time: 00:00:34
+    Error: Total CPU time (on all processors): 00:01:11
 
 
