@@ -1,11 +1,11 @@
 LIBRARY ieee;
+USE ieee.std_logic_1164.all;
 USE ieee.std_logic_signed.all;
 
 ENTITY Controle IS
 	PORT (
-		
-		instruction		: IN 	STD_LOGIC_VECTOR(3 DOWNTO 0);
-		Resetn, Clock		: IN STD_LOGIC;
+		instruction		:IN 	STD_LOGIC_VECTOR(3 DOWNTO 0);
+		Resetn, Clock		:IN STD_LOGIC;
 		
 		ALUOp		: OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 		MemWrite		: OUT	STD_LOGIC;
@@ -33,10 +33,6 @@ BEGIN
 	PROCESS(Clock)
 	BEGIN
 		IF Clock'EVENT AND Clock = '1' THEN
-			
-			
-			
-			
 			IF Resetn = '0' THEN
 				States <= "0000";
 			END IF;

@@ -1,11 +1,12 @@
 LIBRARY ieee;
+USE ieee.std_logic_1164.all;
 USE ieee.std_logic_signed.all;
 
 ENTITY Instruction_Reg IS
 	PORT (
 			Mem_in: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 			OPCode, Ri, Rj, Rk: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-			Clockn, Mov_Cond: IN STD_LOGIC
+			Clock, Mov_Cond: IN STD_LOGIC
 			);
 	END Instruction_Reg;
 	

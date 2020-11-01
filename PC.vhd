@@ -1,6 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-use ieee.std_logic_signed.all;
+USE ieee.std_logic_signed.all;
+
 ENTITY PC IS
 	PORT (
 		Address_out				 : 	OUT 	STD_LOGIC_VECTOR(15 DOWNTO 0);
