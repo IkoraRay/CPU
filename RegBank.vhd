@@ -9,7 +9,7 @@ ENTITY RegBank IS
 		N: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		Rs: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 		Rt: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-		Rin: IN STD_LOGIC_VECTOR (3 DOWNTO 0)
+		Rd: IN STD_LOGIC_VECTOR (3 DOWNTO 0)
 );
 END RegBank;
 	
@@ -29,7 +29,7 @@ BEGIN
 			
 			ELSIF Clock'EVENT AND Clock = '1' THEN
 				IF regwrite = '1' THEN
-					CASE Rin IS
+					CASE Rd IS
 						WHEN "0000" =>  R0 <= "00000000";
 						WHEN "0001" =>  R1 <= N;	
 						WHEN "0010" =>  R2 <= N;						

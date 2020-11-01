@@ -1,22 +1,31 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-
+use ieee.std_logic_signed.all;
 ENTITY PC IS
 	PORT (
-		END_IN			: 	IN 	STD_LOGIC_VECTOR(15 DOWNTO 0);
-		END_OUT			: 	OUT 	STD_LOGIC_VECTOR(15 DOWNTO 0);
-		Clock, PCWrite : 	IN 	STD_LOGIC
+		Address_out				 : 	OUT 	STD_LOGIC_VECTOR(15 DOWNTO 0);
+		Clock, PCWrite,Resetn : 	IN 	STD_LOGIC
 	);
 END PC;
 
 ARCHITECTURE Behavior OF PC IS
+		SIGNAL Address: STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SIGNAL Add: STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+
 BEGIN
-	--Caso não funcione, adicionar signal
+	
+	Add <= "0000000000000001";
 	PROCESS (Clock, PCWrite)
 	BEGIN
 		IF Clock'EVENT AND Clock = '1' THEN
-			IF PC_WRITE = '1' THEN
-				END_OUT <= END_IN;
+			IF Resetn = '0'THEN
+				Address <= "0000000000000000";
+			END IF;
+			IF PCWrite = '1' THEN --Atualizar o PC
+				Address <= Address + Add;
+				ELSE
+				Address_out <= Address;
 			END IF;
 		END IF;
 	END PROCESS;
