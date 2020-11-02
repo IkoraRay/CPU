@@ -1,5 +1,5 @@
-Analysis & Synthesis report for CPU
-Mon Nov 02 12:37:31 2020
+Analysis & Elaboration report for CPU
+Mon Nov 02 19:13:00 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,16 +7,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -40,27 +34,43 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 02 12:37:31 2020       ;
+; Analysis & Elaboration Status      ; Failed - Mon Nov 02 19:13:00 2020           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; CPU                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 1                                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -145,156 +155,65 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; CPU.vhd                          ; yes             ; User VHDL File  ; C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CPU.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 1     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; Clock ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |CPU                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |CPU                ; CPU         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 1                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 02 12:36:56 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+    Info: Processing started: Mon Nov 02 19:12:51 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: PC-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/PC.vhd Line: 12
-    Info (12023): Found entity 1: PC File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/PC.vhd Line: 5
+    Info (12022): Found design unit 1: PC-Behavior File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/PC.vhd Line: 12
+    Info (12023): Found entity 1: PC File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/PC.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file regbank.vhd
-    Info (12022): Found design unit 1: RegBank-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/RegBank.vhd Line: 17
-    Info (12023): Found entity 1: RegBank File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/RegBank.vhd Line: 5
+    Info (12022): Found design unit 1: RegBank-Behavior File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/RegBank.vhd Line: 17
+    Info (12023): Found entity 1: RegBank File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/RegBank.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-LogicFunc File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/ULA.vhd Line: 15
-    Info (12023): Found entity 1: ULA File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/ULA.vhd Line: 5
+    Info (12022): Found design unit 1: ULA-LogicFunc File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/ULA.vhd Line: 15
+    Info (12023): Found entity 1: ULA File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file cache.vhd
-    Info (12022): Found design unit 1: CACHE-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CACHE.vhd Line: 16
-    Info (12023): Found entity 1: CACHE File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CACHE.vhd Line: 5
-Warning (12090): Entity "MUX" obtained from "MUX.vhd" instead of from Quartus Prime megafunction library File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/MUX.vhd Line: 5
+    Info (12022): Found design unit 1: CACHE-Behavior File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CACHE.vhd Line: 16
+    Info (12023): Found entity 1: CACHE File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CACHE.vhd Line: 5
+Warning (12090): Entity "MUX" obtained from "MUX.vhd" instead of from Quartus Prime megafunction library File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/MUX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
-    Info (12022): Found design unit 1: MUX-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/MUX.vhd Line: 13
-    Info (12023): Found entity 1: MUX File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/MUX.vhd Line: 5
+    Info (12022): Found design unit 1: MUX-Behavior File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/MUX.vhd Line: 13
+    Info (12023): Found entity 1: MUX File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/MUX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file controle.vhd
-    Info (12022): Found design unit 1: Controle-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/Controle.vhd Line: 23
-    Info (12023): Found entity 1: Controle File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/Controle.vhd Line: 5
+    Info (12022): Found design unit 1: Controle-Behavior File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/Controle.vhd Line: 23
+    Info (12023): Found entity 1: Controle File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/Controle.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file instruction_reg.vhd
-    Info (12022): Found design unit 1: Instruction_Reg-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/Instruction_Reg.vhd Line: 13
-    Info (12023): Found entity 1: Instruction_Reg File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/Instruction_Reg.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: CPU-Behavior File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CPU.vhd Line: 11
-    Info (12023): Found entity 1: CPU File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CPU.vhd Line: 5
-Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Warning (12158): Entity "CPU" contains only dangling pins
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Clock" File: C:/Users/bbann/Documents/Develop/Arquitetura de Computadores/CPU/CPU.vhd Line: 7
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Mon Nov 02 12:37:31 2020
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:01:10
+    Info (12022): Found design unit 1: Instruction_Reg-Behavior File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/Instruction_Reg.vhd Line: 13
+    Info (12023): Found entity 1: Instruction_Reg File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/Instruction_Reg.vhd Line: 5
+Error (10500): VHDL syntax error at CPU.vhd(144) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 144
+Error (10500): VHDL syntax error at CPU.vhd(144) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 144
+Error (10500): VHDL syntax error at CPU.vhd(146) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 146
+Error (10500): VHDL syntax error at CPU.vhd(146) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 146
+Error (10500): VHDL syntax error at CPU.vhd(148) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 148
+Error (10500): VHDL syntax error at CPU.vhd(148) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 148
+Error (10500): VHDL syntax error at CPU.vhd(150) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 150
+Error (10500): VHDL syntax error at CPU.vhd(150) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 150
+Error (10500): VHDL syntax error at CPU.vhd(152) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 152
+Error (10500): VHDL syntax error at CPU.vhd(152) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 152
+Error (10500): VHDL syntax error at CPU.vhd(154) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 154
+Error (10500): VHDL syntax error at CPU.vhd(154) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 154
+Error (10500): VHDL syntax error at CPU.vhd(156) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 156
+Error (10500): VHDL syntax error at CPU.vhd(156) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 156
+Error (10500): VHDL syntax error at CPU.vhd(158) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 158
+Error (10500): VHDL syntax error at CPU.vhd(158) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 158
+Error (10500): VHDL syntax error at CPU.vhd(160) near text "PORT";  expecting "(", or "'", or "." File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 160
+Error (10500): VHDL syntax error at CPU.vhd(160) near text ";";  expecting ":=", or "<=" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 160
+Info (12021): Found 0 design units, including 0 entities, in source file cpu.vhd
+Error (10500): VHDL syntax error at Extensor.vhd(17) near text "IF";  expecting "end", or "(", or an identifier ("if" is a reserved keyword), or a concurrent statement File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/Extensor.vhd Line: 17
+Error (10500): VHDL syntax error at Extensor.vhd(19) near text "ELSE";  expecting "end", or "(", or an identifier ("else" is a reserved keyword), or a concurrent statement File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/Extensor.vhd Line: 19
+Error (10500): VHDL syntax error at Extensor.vhd(21) near text "IF";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/Extensor.vhd Line: 21
+Info (12021): Found 0 design units, including 0 entities, in source file extensor.vhd
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 21 errors, 2 warnings
+    Error: Peak virtual memory: 4781 megabytes
+    Error: Processing ended: Mon Nov 02 19:13:00 2020
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:20
 
 

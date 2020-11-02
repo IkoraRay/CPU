@@ -23,7 +23,7 @@ BEGIN
 			IF Resetn = '0'THEN
 				Address <= "0000000000000000";
 			END IF;
-			IF PCWrite = '1' THEN --Atualizar o PC
+			IF PCWrite = '1' THEN 
 				Address <= Address + Add;
 				ELSE
 				Address_out <= Address;
