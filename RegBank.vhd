@@ -2,6 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_signed.all;
 
+
 ENTITY RegBank IS
 	PORT(
 		regwrite, Clock, Resetn: IN STD_LOGIC;
@@ -25,8 +26,11 @@ BEGIN
 	PROCESS (Resetn, Clock)
 		BEGIN
 			IF Resetn = '0'THEN
-				S1 <= "00000000";
-				S2 <= "00000000";
+				R0 <= "00000000";
+				R1 <= "00000000";
+				R2 <= "00000000";
+				R3 <= "00000000";
+				R4 <= "00000000";
 			
 			ELSIF Clock'EVENT AND Clock = '1' THEN
 				IF regwrite = '1' THEN
@@ -39,21 +43,21 @@ BEGIN
 					END CASE;
 						
 				ELSIF regwrite = '0' THEN
-						CASE Rs IS
-							WHEN "0000" => s1	<=	R0;
-							WHEN "0001" => S1 <= R1;
-							WHEN "0010" => S1 <= R2;
-							WHEN "0011" => S1 <= R3;
-							WHEN OTHERS => S1 <= R4;
+						CASE Rs IS	 
+						 WHEN "0000" => S1 <= R0;
+						 WHEN "0001" => S1 <= R1;
+						 WHEN "0010" => S1 <= R2;
+						 WHEN "0011" =>  S1 <= R3;
+						 WHEN OTHERS => S1 <= R4;
 						END CASE;
-								
-						CASE Rt IS
-							WHEN "0000" => s2	<=	R0;
-							WHEN "0001" => S2 <= R1;
-							WHEN "0010" => S2 <= R2;
-							WHEN "0011" => S2 <= R3;
-							WHEN OTHERS => S2 <= R4;
+						CASE Rt IS		
+						WHEN "0000" => S2 <= R0;
+						 WHEN "0001" => S2 <= R1;
+						 WHEN "0010" => S2 <= R2;
+						 WHEN "0011" =>  S2 <= R3;
+						 WHEN OTHERS => S2 <= R4;
 						END CASE;
+						
 				END IF;
 			END IF;
 	END PROCESS;
