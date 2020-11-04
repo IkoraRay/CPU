@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPU
-Wed Nov 04 11:56:02 2020
+Wed Nov 04 16:51:52 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Nov 04 11:56:02 2020       ;
+; Analysis & Elaboration Status      ; Successful - Wed Nov 04 16:51:52 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; CPU                                         ;
@@ -172,7 +172,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 04 11:55:52 2020
+    Info: Processing started: Wed Nov 04 16:51:42 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -206,20 +206,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_ext
     Info (12022): Found design unit 1: MUX_EXT-Behavior File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/MUX_EXT.vhd Line: 14
     Info (12023): Found entity 1: MUX_EXT File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/MUX_EXT.vhd Line: 5
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(54): object "Overflow" assigned a value but never read File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 54
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(55): object "Cout" assigned a value but never read File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 55
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 142
-Info (12128): Elaborating entity "CACHE" for hierarchy "CACHE:CACHE1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 144
-Info (12128): Elaborating entity "Instruction_Reg" for hierarchy "Instruction_Reg:IR1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 146
-Info (12128): Elaborating entity "Controle" for hierarchy "Controle:UC1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 148
-Info (12128): Elaborating entity "MUX" for hierarchy "MUX:MUX1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 150
-Info (12128): Elaborating entity "RegBank" for hierarchy "RegBank:RB1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 152
-Info (12128): Elaborating entity "MUX_EXT" for hierarchy "MUX_EXT:MUX2" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 154
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 156
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(51): object "Overflow" assigned a value but never read File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 51
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(52): object "Cout" assigned a value but never read File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 52
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 139
+Info (12128): Elaborating entity "CACHE" for hierarchy "CACHE:CACHE1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 141
+Info (12128): Elaborating entity "Instruction_Reg" for hierarchy "Instruction_Reg:IR1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 143
+Info (12128): Elaborating entity "Controle" for hierarchy "Controle:UC1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 145
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:MUX1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 147
+Info (12128): Elaborating entity "RegBank" for hierarchy "RegBank:RB1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 149
+Info (12128): Elaborating entity "MUX_EXT" for hierarchy "MUX_EXT:MUX2" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 151
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA1" File: C:/Users/luiss/Desktop/Pastas/Aula pratica/CPU/CPU.vhd Line: 153
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Wed Nov 04 11:56:02 2020
+    Info: Processing ended: Wed Nov 04 16:51:52 2020
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:19
 
 
