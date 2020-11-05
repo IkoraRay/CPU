@@ -13,6 +13,9 @@ ENTITY ULA IS
 END ULA;
 	 
 ARCHITECTURE LogicFunc OF ULA IS
+
+	-- As operações são feitas simultaneamente, na qual, a saida é determinada pelo sinal OP (ALUOp)
+
 	SIGNAL Sum1: STD_LOGIC_VECTOR(7 DOWNTO 0);
 	SIGNAL Sum2: STD_LOGIC_VECTOR(8 DOWNTO 0);
 	SIGNAL L1: STD_LOGIC_VECTOR(7 DOWNTO 0);

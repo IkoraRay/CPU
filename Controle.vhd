@@ -23,6 +23,11 @@ END Controle;
 ARCHITECTURE Behavior Of Controle IS
 		SIGNAL States: STD_LOGIC_VECTOR(3 DOWNTO 0);
 		
+		-- Unidade de controle alterna entre os estados conforme o andamento da execução da instrução
+		-- Realizando Fetch, Decode, Tipo R (primeira etapa), Tipo I (primeira Etapa, Tipo R/I (Segunda etapa), Tipo R/I(Terceira etapa)
+		-- Sinais de controle são emitidos conforme o estado na qual a unidade de controle se encontra
+		-- Estado é resetado pelo sinal reset ou quando chega em um estado final da operação ou quando é um estado invalido (WHEN OTHERS)
+		-- PCWrite gerado apenas no ultimo estado para obter a proxima instrução (Instrução atual concluida)
 		
 BEGIN
 	PROCESS(Clock)

@@ -11,6 +11,11 @@ ENTITY Instruction_Reg IS
 	END Instruction_Reg;
 	
 ARCHITECTURE Behavior OF Instruction_Reg IS
+
+	-- Instrução a ser executada (lida na memoria) é recebida para ser fragmentada em varios sinais
+	-- Opcode e os registradores/imediato a serem manuseados pela instrução
+	-- Se for MOV, um dos registradores é o R0 (constante 0)
+
 	BEGIN
 			PROCESS(Clock)
 			BEGIN

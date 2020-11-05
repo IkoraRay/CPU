@@ -11,6 +11,9 @@ ENTITY MUX IS
 END MUX;
 				
 ARCHITECTURE Behavior OF MUX IS
+
+	-- Funcionamento básico do MUX, escolhendo uma das entradas como a saida conforme a chave passada
+
 BEGIN
 	PROCESS(Clock)
 	BEGIN

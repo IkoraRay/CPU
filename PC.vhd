@@ -12,7 +12,9 @@ END PC;
 ARCHITECTURE Behavior OF PC IS
 		SIGNAL Address: STD_LOGIC_VECTOR(15 DOWNTO 0);
 		SIGNAL Add: STD_LOGIC_VECTOR(15 DOWNTO 0);
-
+		
+		-- O Componente PC tem o funcionamento semelhante a um contador, resetando através do sinal reset para uma nova contagem
+		-- A contagem é feita pela incrementação do sinal inicial, no caso 0
 
 BEGIN
 	

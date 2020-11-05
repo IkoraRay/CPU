@@ -52,6 +52,8 @@ ARCHITECTURE Behavior OF CPU IS
 	SIGNAL Cout 		:	STD_LOGIC;
 	
 	
+	-- Todos os componentes necessarios da ula
+	
 	COMPONENT PC
 		PORT (
 			Address_out				 : 	OUT 	STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -136,22 +138,20 @@ ARCHITECTURE Behavior OF CPU IS
 	
 	
 BEGIN	
-			PC1: PC PORT MAP(Address, Clock, PCWrite, Resetn);
-			
-			CACHE1: CACHE PORT MAP(Address, Rk_ime, instruction, Result, data_mem, MemWrite, Clock, MemtoReg);
-			
-			IR1: Instruction_Reg PORT MAP(instruction, OPcode, Ri, Rj, Rk_ime, Clock, MovCond);
-			
-			UC1: Controle PORT MAP(OPCode, Resetn, Clock, ALUop, MemWrite, MemtoReg, RegWrite, RegDst, PCWrite, Cin, ALUSourceB, MovCond);
-			
-			MUX1: MUX PORT MAP(Result, data_mem, DataReg, RegDst, Clock);
-			
-			RB1: RegBank PORT MAP(RegWrite, Clock, Resetn, RegA, RegB, DataReg, Rj, Rk_ime, Ri);
-			
-			MUX2: MUX_EXT PORT MAP(RegB, Rk_ime, Operator2, ALUSourceB, Clock);
-		
-			ULA1: ULA PORT MAP(Cin, Clock, RegA, Operator2, Result, ALUop, Cout, Overflow);
-			
+	PC1: PC PORT MAP(Address, Clock, PCWrite, Resetn);
 	
-
+	CACHE1: CACHE PORT MAP(Address, Rk_ime, instruction, Result, data_mem, MemWrite, Clock, MemtoReg);
+	
+	IR1: Instruction_Reg PORT MAP(instruction, OPcode, Ri, Rj, Rk_ime, Clock, MovCond);
+	
+	UC1: Controle PORT MAP(OPCode, Resetn, Clock, ALUop, MemWrite, MemtoReg, RegWrite, RegDst, PCWrite, Cin, ALUSourceB, MovCond);
+			
+	MUX1: MUX PORT MAP(Result, data_mem, DataReg, RegDst, Clock);
+	
+	RB1: RegBank PORT MAP(RegWrite, Clock, Resetn, RegA, RegB, DataReg, Rj, Rk_ime, Ri);
+	
+	MUX2: MUX_EXT PORT MAP(RegB, Rk_ime, Operator2, ALUSourceB, Clock);
+	
+	ULA1: ULA PORT MAP(Cin, Clock, RegA, Operator2, Result, ALUop, Cout, Overflow);		
+	
 END Behavior;

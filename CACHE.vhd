@@ -14,6 +14,14 @@ ENTITY CACHE IS
 END CACHE;
 	
 ARCHITECTURE Behavior OF CACHE IS
+
+	-- Memoria contendo as instruções a serem executadas
+	-- O vetor de instruções é acessado conforme o valor do componente PC
+	-- Memoria tambem possui regiões para escrita e leitura de dados
+	-- Se sinal MemWrite for 1, é realizado uma escrita de dados
+	-- Se sinal MemToReg é realizado uma leitura de dados
+	-- Senão, é lida a instrução apontada por PC
+
 	TYPE instruction_array IS ARRAY (0 TO 11) of STD_LOGIC_VECTOR (15 DOWNTO 0);
 	TYPE data_array is ARRAY (0 TO 11) of STD_LOGIC_VECTOR (7 DOWNTO 0);
 	SIGNAL int_address: INTEGER RANGE 0 TO 11;

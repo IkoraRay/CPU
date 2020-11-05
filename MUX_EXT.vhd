@@ -13,6 +13,13 @@ END MUX_EXT;
 				
 ARCHITECTURE Behavior OF MUX_EXT IS
 	SIGNAL sinal : STD_LOGIC;
+	
+	
+	-- Semelhante a MUX, contudo, uma das entradas é o imediato
+	-- O imediato por sua vez recebe o tratamento de extender o sinal antes de entrar na ULA
+	-- O sinal é extendido conforme o bit mais significativo do imediato
+	-- Imediato é um número sinalizado (portanto positivo ou negativo)
+	
 BEGIN
 	PROCESS(Clock)
 	BEGIN

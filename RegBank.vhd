@@ -16,6 +16,10 @@ ENTITY RegBank IS
 END RegBank;
 	
 ARCHITECTURE Behavior OF RegBank IS
+	--	O banco de registradores tem um total de cinco, sendo um deles constante e são zerados inicialmente pelo reset
+	-- Quando o sinal regwrite for 1, o conteudor recebido (calculo da ula) armazena no registrador apontado pelo endereço RD
+	-- Senao, é realizado a leitura dos registradores apontados por RS e RT
+
 	SIGNAL R0: STD_LOGIC_VECTOR(7 DOWNTO 0); -- Constante 0
 	SIGNAL R1: STD_LOGIC_VECTOR(7 DOWNTO 0);
 	SIGNAL R2: STD_LOGIC_VECTOR(7 DOWNTO 0);
