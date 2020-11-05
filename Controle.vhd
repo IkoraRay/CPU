@@ -22,12 +22,7 @@ END Controle;
 
 ARCHITECTURE Behavior Of Controle IS
 		SIGNAL States: STD_LOGIC_VECTOR(3 DOWNTO 0);
-		-- 0- fetch
-		-- 1- decode
-		-- 2- type-R(1)
-		-- 3- type-R(2)
-		-- 4- type-I
-		-- 5- MOV
+		
 		
 BEGIN
 	PROCESS(Clock)
@@ -181,7 +176,7 @@ BEGIN
 						PCWrite <= '0';
 						Cin <= '0';
 						ALUSourceB <= '0';
-						Mov_Cond <= '1';
+						Mov_Cond <= '0';
 						States <= "0110";
 						
 					ELSIF instruction = "1110" THEN -- Registradores Rs inutil
